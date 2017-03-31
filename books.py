@@ -34,38 +34,44 @@ def delete_book(catalogue, title, author):
 
 
 def sort_by_year(book_list, desc):
-    """Returns book list sorted by year. If desc=1, sorts by increase; if desc=-1, sorts by decrease; otherwise \
-    sorting is not performed"""
+    """Returns book list sorted by year according to 'desc' parameter (see filter_books description).
+    In next versions function will be private: usage outside this module is not recommended"""
     if desc == 1:
         return sorted(book_list, key=lambda x: x["year"])
-    elif desc == -1:
-        return sorted(book_list, key=lambda d: d["year"], reverse=True)
+    if desc == -1:
+        return sorted(book_list, key=lambda x: x["year"], reverse=True)
     return book_list
+
+
+def filter_by_year(book_list, year_from, year_to, desc):
+    """Filters books from book list, published between 'year_from' and 'year_to' and sorted according to 'desc' \
+    parameter (see filter_books description).
+    In next versions function will be private: usage outside this module is not recommended"""
+    if year_from is None:
+        return sort_by_year(book_list, desc)
+    if year_to is None:
+        year_to = year_from
+    res = []
+    for x in book_list:
+        if (x["year"] in range(year_from, year_to+1)) and (x not in res):
+            res.append(x)
+    return sort_by_year(res, desc)
 
 
 def filter_books(catalogue, key, value, year_from=None, year_to=None, desc=0):
     """Filters books by the key and/or publication year. Key must be "author", "genre", or "year". Value is author's \
     or genre's name; if key="year", any value is allowed. If year_from=None, filtering by year is not performed. If \
-    year_to=None, returns only books published in year_from. If desc=1, books are sorted by publish date increasing; \
-    if desc=-1, are sorted by date decreasing; otherwise sorting is not performed"""
+    year_to=None and not year_from=None, returns only books published in year_from. If desc=1, books are sorted by \
+    publish year increasing; if desc=-1, are sorted by year decreasing; otherwise sorting is not performed"""
     if key not in ["author", "genre", "year"]:
         return
-    buf, res = [], []
     if key == "year":
-        buf = catalogue
-    else:
-        for x in catalogue:
-            if (x[key] == value) and (x not in buf):
-                buf.append(x)
-    if year_to is None:
-        year_to = year_from
-    if year_from is not None:
-        for x in buf:
-            if (x["year"] in range(year_from, year_to+1)) and (x not in res):
-                res.append(x)
-    else:
-        res = buf
-    return sort_by_year(res, desc)
+        return filter_by_year(catalogue, year_from, year_to, desc)
+    res = []
+    for x in catalogue:
+        if (x[key] == value) and (x not in res):
+            res.append(x)
+    return filter_by_year(res, year_from, year_to, desc)
 
 
 def get_authors(catalogue, genre=None):
@@ -103,7 +109,7 @@ print(search_book(books, "Бійцівський клуб", "Чак Полані
 print(search_book(books, "Колекціонер", "Джон Фаулз"))
 new_book = {"path": "C:\\Books", "title": "Перехресні стежки", "author": "Іван Франко", "publication": "Фоліо",
             "genre": "Повість", "description": "Класика укр. літ.", "year": 1900}
-edit_book(books, "Бійцівський клуб", "Чак Поланик", new_book)
+edit_book(books, "Бійцівський клуб", "Чак Поланік", new_book)
 edit_book(books, "Перехресні стежки", "Іван Франко", new_book)
 print(delete_book(books, "Колекціонер", "Джон Фаулз"))
 print(delete_book(books, "Бійцівський клуб", "Чак Поланік"))
