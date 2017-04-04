@@ -3,6 +3,8 @@ book_catalogue = []
 
 
 def get_book():
+    """Create new dictionary element by using get_xxx functions;
+     return dictionary"""
     buf = {}
     print("\nEnter new book\n")
     buf['path'] = get_path()
@@ -61,9 +63,9 @@ def get_key_value():
 
 
 def get_optional_values():
-    print("From(optional): ")
+    print("From(optional) ")
     year_f = get_year()
-    print("To(optional): ")
+    print("To(optional) ")
     year_t = get_year()
     print("Sort(optional) : 1 - ascending, -1 - descending")
     try:
@@ -91,6 +93,13 @@ def print_menu():
     print("0. Finish work")
 
 
+def pprint(catalogue):
+    for i in catalogue:
+        print ("\nPath: {}, Title: {}, Author: {}".format(i['path'],i['title'],i['author']))
+        print ("Genre: {}, Year: {}".format(i['genre'],i['year']))
+        print ("Description: {}\n".format(i['description']))
+        
+        
 def get_some_tests():
     book1 = {"path": "C:\\Books", "title": "Перехресні стежки", "author": "Іван Франко", "publication": "Фоліо",
              "genre": "Пригодницький роман", "description": "Мясо, матюки, убийства", "year": 1686}

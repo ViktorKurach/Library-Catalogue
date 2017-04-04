@@ -17,7 +17,7 @@ while True:
         books.delete_book(book_catalogue,bsf.get_book_name(),bsf.get_author_name())
     elif ch == '4':
         year_f, year_t, desc=bsf.get_optional_values()
-        books.filter_books(book_catalogue,bsf.get_key(),bsf.get_key_value(),year_f,year_t,desc)
+        bsf.pprint(books.filter_books(book_catalogue,bsf.get_key(),bsf.get_key_value(),year_f,year_t,desc))
     elif ch == '5':
         books.get_authors(book_catalogue,bsf.get_genre())
     elif ch == '0':
