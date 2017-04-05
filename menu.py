@@ -19,7 +19,7 @@ while True:
         year_f, year_t, desc=bsf.get_optional_values()
         bsf.pprint(books.filter_books(book_catalogue,bsf.get_key(),bsf.get_key_value(),year_f,year_t,desc))
     elif ch == '5':
-        books.get_authors(book_catalogue,bsf.get_genre())
+        bsf.print_authors(books.get_authors(book_catalogue,bsf.get_genre()))
     elif ch == '0':
         break
 

@@ -98,22 +98,10 @@ def pprint(catalogue):
         print ("\nPath: {}, Title: {}, Author: {}".format(i['path'],i['title'],i['author']))
         print ("Genre: {}, Year: {}".format(i['genre'],i['year']))
         print ("Description: {}\n".format(i['description']))
+
+
+def print_authors(authors):
+    for i in authors:
+        print("Author: {}".format(i))
+
         
-        
-def get_some_tests():
-    book1 = {"path": "C:\\Books", "title": "Перехресні стежки", "author": "Іван Франко", "publication": "Фоліо",
-             "genre": "Пригодницький роман", "description": "Мясо, матюки, убийства", "year": 1686}
-    book2 = {"path": "C:\\Books", "title": "Ворошиловград", "author": "Сергій Жадан",
-             "publication": "Клуб сімейного дозвілля", "genre": "Роман", "description": "Мясо, матюки, убийства",
-             "year": 2010}
-    book3 = {"path": "C:\\Books", "title": "Месопотамія", "author": "Сергій Жадан",
-             "publication": "Клуб сімейного дозвілля", "genre": "Поезія",
-             "description": "Урбаністична збірка про Харків",
-             "year": 2014}
-    book4 = {"path": "C:\\Books", "title": "Колекціонер", "author": "Джон Фаулз",
-             "publication": "Клуб сімейного дозвілля", "genre": "Роман", "description": "Книга про поїхавшого",
-             "year": 2016}
-    books.add_book(book_catalogue, book4)
-    books.add_book(book_catalogue, book3)
-    books.add_book(book_catalogue, book2)
-    books.add_book(book_catalogue, book1)
