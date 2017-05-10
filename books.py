@@ -5,14 +5,6 @@ def add_book(catalogue, new):
     :param new: a dictionary with next keys: 'path', 'title', 'author',
     'publication', 'genre', 'description', 'year'.
     :returns 1 if the book is already in catalogue, or 0 otherwise.
-
-    >>> catalogue = []
-    >>> book = {"path": "Path", "title": "T", "author": "A",\
-    "publication": "P", "genre": "G", "description": "D", "year": 2017}
-    >>> add_book(catalogue, book)
-    0
-    >>> add_book(catalogue, book)
-    1
     """
     if new in catalogue:
         return 1
@@ -28,14 +20,6 @@ def search_book(catalogue, title, author):
     :param author: a string - name of author of the book, which is searched.
     :returns a dictionary, corresponding to searched book, or nothing, if book
     is not found.
-
-    >>> book = {"path": "Path", "title": "T", "author": "A",\
-    "publication": "P", "genre": "G", "description": "D", "year": 2017}
-    >>> catalogue = [book]
-    >>> search_book(catalogue, "T", "A")
-    {'path': 'Path', 'title': 'T', 'author': 'A', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2017}
-    >>> search_book(catalogue, "TT", "AA")
     """
     for x in catalogue:
         if (x["title"] == title) and (x["author"] == author):
@@ -53,16 +37,6 @@ def edit_book(catalogue, old_title, old_author, new):
     'description', 'year'.
     :returns new book in case of success, or nothing, if old book is not
     found in the catalogue.
-
-    >>> book = {"path": "Path", "title": "TT", "author": "AA",\
-    "publication": "P", "genre": "G", "description": "D", "year": 1800}
-    >>> new = {"path": "Path", "title": "T", "author": "A",\
-    "publication": "P", "genre": "G", "description": "D", "year": 2017}
-    >>> catalogue = [book]
-    >>> edit_book(catalogue, "TT", "AA", new)
-    {'path': 'Path', 'title': 'T', 'author': 'A', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2017}
-    >>> edit_book(catalogue, "Tit", "A", new)
     """
     book = search_book(catalogue, old_title, old_author)
     if book:
@@ -79,14 +53,6 @@ def delete_book(catalogue, title, author):
     :param title: a string - title of the book, which will be deleted.
     :param author: a string - author of the book, which will be deleted.
     :returns 0 in case of success, or 1, if the book is not found in catalogue.
-
-    >>> book = {"path": "Path", "title": "T", "author": "A",\
-    "publication": "P", "genre": "G", "description": "D", "year": 2017}
-    >>> catalogue = [book]
-    >>> delete_book(catalogue, "T", "A")
-    0
-    >>> delete_book(catalogue, "T", "A")
-    1
     """
     try:
         catalogue.remove(search_book(catalogue, title, author))
@@ -105,8 +71,6 @@ def sort_by_year(book_list, desc):
 
     In next versions function will be private: usage outside this module is
     not recommended.
-
-    Function is always called by filter_by_year(): see tests there.
     """
     if desc == 1:
         return sorted(book_list, key=lambda x: x["year"])
@@ -130,8 +94,6 @@ def filter_by_year(book_list, year_from, year_to, desc):
 
     In next versions function will be private: usage outside this module is
     not recommended.
-
-    Function is always called by filter_books(): see tests there.
     """
     if year_from is None:
         return sort_by_year(book_list, desc)
@@ -159,82 +121,6 @@ def filter_books(catalogue, key, value, year_from=None, year_to=None, desc=0):
     :param desc: if 1, sorts selected books by publishing year increasing,
     if -1 - by publishing year decreasing; otherwise sorting is not performed.
     :returns a filtered and sorted list of books.
-
-    >>> book1 = {"path": "Path", "title": "T1", "author": "A1",\
-    "publication": "P", "genre": "G", "description": "D", "year": 1900}
-    >>> book2 = {"path": "Path", "title": "T2", "author": "A2",\
-    "publication": "P", "genre": "G", "description": "D", "year": 2000}
-    >>> book3 = {"path": "Path", "title": "T3", "author": "A2",\
-    "publication": "P", "genre": "G", "description": "D", "year": 2010}
-    >>> catalogue = [book2, book1, book3]
-
-    All of the books:
-    >>> filter_books(catalogue, "year", None)
-    [{'path': 'Path', 'title': 'T2', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2000}, \
-{'path': 'Path', 'title': 'T1', 'author': 'A1', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 1900}, \
-{'path': 'Path', 'title': 'T3', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2010}]
-
-    Books published in only one year, without sorting:
-    >>> filter_books(catalogue, "year", "anything", 2000)
-    [{'path': 'Path', 'title': 'T2', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2000}]
-
-    Books published between two years, by year decreasing:
-    >>> filter_books(catalogue, "year", None, 2000, 2010, -1)
-    [{'path': 'Path', 'title': 'T3', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2010}, \
-{'path': 'Path', 'title': 'T2', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2000}]
-
-    Books published between two years, by year increasing:
-    >>> filter_books(catalogue, "year", None, 1900, 2100, 1)
-    [{'path': 'Path', 'title': 'T1', 'author': 'A1', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 1900}, \
-{'path': 'Path', 'title': 'T2', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2000}, \
-{'path': 'Path', 'title': 'T3', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2010}]
-
-    Books of one author from all years, by years decreasing:
-    >>> filter_books(catalogue, "author", "A2", None, None, -1)
-    [{'path': 'Path', 'title': 'T3', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2010}, \
-{'path': 'Path', 'title': 'T2', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2000}]
-
-    Books of one author from one year, without sorting:
-    >>> filter_books(catalogue, "author", "A2", 2000)
-    [{'path': 'Path', 'title': 'T2', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2000}]
-
-    Books of one author between two years, by increasing:
-    >>> filter_books(catalogue, "author", "A2", 2000, 2005, 1)
-    [{'path': 'Path', 'title': 'T2', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2000}]
-
-    Books of one genre from all years, by years increasing:
-    >>> filter_books(catalogue, "genre", "G", None, None, 1)
-    [{'path': 'Path', 'title': 'T1', 'author': 'A1', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 1900}, \
-{'path': 'Path', 'title': 'T2', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2000}, \
-{'path': 'Path', 'title': 'T3', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2010}]
-
-    Books of one genre from one year, without sorting:
-    >>> filter_books(catalogue, "genre", "G", 2000)
-    [{'path': 'Path', 'title': 'T2', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2000}]
-
-    Books of one genre between two years, by decreasing:
-    >>> filter_books(catalogue, "genre", "G", 2000, 2015, -1)
-    [{'path': 'Path', 'title': 'T3', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2010}, \
-{'path': 'Path', 'title': 'T2', 'author': 'A2', 'publication': 'P', \
-'genre': 'G', 'description': 'D', 'year': 2000}]
     """
     if key not in ["author", "genre", "year"]:
         return
@@ -254,18 +140,6 @@ def get_authors(catalogue, genre=None):
     :param genre: a string - name of the genre, authors must relate to;
     if None, returns all of the authors in catalogue.
     :returns list of strings - authors' names.
-
-    >>> book1 = {"path": "Path", "title": "T1", "author": "A1",\
-    "publication": "P", "genre": "G1", "description": "D", "year": 1900}
-    >>> book2 = {"path": "Path", "title": "T2", "author": "A2",\
-    "publication": "P", "genre": "G1", "description": "D", "year": 2000}
-    >>> book3 = {"path": "Path", "title": "T3", "author": "A2",\
-    "publication": "P", "genre": "G2", "description": "D", "year": 2010}
-    >>> catalogue = [book2, book1, book3]
-    >>> get_authors(catalogue, "G2")
-    ['A2']
-    >>> get_authors(catalogue)
-    ['A2', 'A1']
     """
     authors = []
     for x in catalogue:
@@ -277,66 +151,93 @@ def get_authors(catalogue, genre=None):
     return authors
 
 
-def parse_config(file, section, option):
+def get_config(filename, section, option):
     """
     Parses .cfg file and gets some value from it.
-    :param file: a string - file name
-    :param section: a string - name of section
-    :param option: a string - name of property
-    :returns a string - value of property in section in case of success,
-    or None otherwise.
-
-    In next versions function will be private: usage outside this module is
-    not recommended.
+    :param filename: a string - file name.
+    :param section: a string - name of section.
+    :param option: a string - name of option.
+    :returns value of option in section in case of success, or nothing
+    otherwise.
     """
     import configparser
     config = configparser.RawConfigParser()
-    try:
-        config.read(file)
-        return config.get(section, option)
-    except configparser.NoSectionError:
-        return
-    except configparser.MissingSectionHeaderError:
-        return
+    config.read(filename)
+    return config.get(section, option)
 
 
-def load_library(file):
+def set_config(filename, section, option, new_value):
     """
-    Loads a book list from a file.
-    :param file: a string - .pkl, .json or .yaml file name.
-    :returns loaded list of books in case of success, or None otherwise.
+    Parses .cfg file and sets new value for some option.
+    :param filename: a string - file name.
+    :param section: a string - name of section.
+    :param option: a string - name of option.
+    :param new_value: a new value of option in section.
+    :returns new_value in case of success, or nothing otherwise.
     """
-    file_type = parse_config("config.cfg", "storage", "db_file_type")
+    import configparser
+    config = configparser.RawConfigParser()
+    config.read(filename)
+    config.set(section, option, new_value)
+    with open(filename, "w") as configfile:
+        config.write(configfile)
+    return new_value
+
+
+def import_db_module(file_type):
+    """
+    Imports and returns one of db_xxx modules depending on file_type.
+    :param file_type: "pkl", "json" or "yaml"
+    :return: if file_type="pkl", returns module db_pickle; if file_type="json",
+    returns module db_json; if file_type="yaml", returns module db_yaml.
+
+    In next versions function will be private: usage outside this module is not
+    recommended.
+    """
     if file_type == "pkl":
-        import dbpickle as db
+        import db_pickle
+        return db_pickle
     elif file_type == "json":
-        import dbjson as db
+        import db_json
+        return db_json
     elif file_type == "yaml":
-        import dbyaml as db
+        import db_yaml
+        return db_yaml
+
+
+def load_library(file, test_mode=False):
+    """
+    Loads a book list from .pkl, .json or .yaml file.
+    :param file: a file object; file must be opened in "rb" mode, and be the
+    same type, as set in 'db_file_type' option in 'config.cfg'. Otherwise
+    function's work is unpredictable.
+    :param test_mode: if True, 'test_file_type' option instead of
+    'db_file_type' is used.
+    :returns loaded list of books in case of success.
+    """
+    if test_mode:
+        file_type = get_config("config.cfg", "storage", "test_file_type")
     else:
-        return
+        file_type = get_config("config.cfg", "storage", "db_file_type")
+    db = import_db_module(file_type)
     return db.load_library(file)
 
 
-def save_library(file, catalogue):
+def dump_library(file, catalogue, test_mode=False):
     """
-    Dumps list of books into the file.
-    :param file: a string - .pkl, .json or .yaml file name.
+    Dumps list of books into .pkl, .json or .yaml file.
+    :param file: a file object; file must be opened in "wb" mode, if it is
+    .pkl, or in "w" mode if it is .json or .yaml; file type must be the same,
+    as set in 'db_file_type' option in 'config.cfg'. Otherwise function's work
+    is unpredictable.
     :param catalogue: a list of books.
-    :returns catalogue in case of success, or None otherwise.
+    :param test_mode: if True, 'test_file_type' option instead of
+    'db_file_type' is used.
+    :returns catalogue in case of success.
     """
-    file_type = parse_config("config.cfg", "storage", "db_file_type")
-    if file_type == "pkl" and file[-4:] == ".pkl":
-        import dbpickle as db
-    elif file_type == "json" and file[-5:] == ".json":
-        import dbjson as db
-    elif file_type == "yaml" and file[-5:] == ".yaml":
-        import dbyaml as db
+    if test_mode:
+        file_type = get_config("config.cfg", "storage", "test_file_type")
     else:
-        return
-    return db.save_library(file, catalogue)
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+        file_type = get_config("config.cfg", "storage", "db_file_type")
+    db = import_db_module(file_type)
+    return db.dump_library(file, catalogue)

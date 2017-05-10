@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf254e73-fa84-419a-af39-786474ce1524" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dbjson.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dbpickle.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dbyaml.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/books.py" afterPath="$PROJECT_DIR$/books.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.cfg" afterPath="$PROJECT_DIR$/config.cfg" />
     </list>
     <ignored path="Library.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,77 +28,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="menu.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/menu.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="booksupfunc.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/booksupfunc.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1889">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="books.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/books.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="340" column="4" selection-start-line="340" selection-start-column="4" selection-end-line="340" selection-end-column="4" />
-              <folding>
-                <marker date="1494424573934" expanded="true" signature="372:488" ph="..." />
-                <marker date="1494424573934" expanded="true" signature="1081:1193" ph="..." />
-                <marker date="1494424573934" expanded="true" signature="1081:1197" ph="..." />
-                <marker date="1494424573934" expanded="true" signature="2122:2240" ph="..." />
-                <marker date="1494424573934" expanded="true" signature="2257:2373" ph="..." />
-                <marker date="1494424573934" expanded="true" signature="3181:3297" ph="..." />
-                <marker date="1494424573934" expanded="true" signature="6418:6536" ph="..." />
-                <marker date="1494424573934" expanded="true" signature="6555:6673" ph="..." />
-                <marker date="1494424573934" expanded="true" signature="6692:6810" ph="..." />
-                <marker date="1494424573934" expanded="true" signature="10976:11095" ph="..." />
-                <marker date="1494424573934" expanded="true" signature="11114:11233" ph="..." />
-                <marker date="1494424573934" expanded="true" signature="11252:11371" ph="..." />
-              </folding>
+            <state relative-caret-position="4114">
+              <caret line="242" column="43" selection-start-line="242" selection-start-column="43" selection-end-line="242" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbpickle.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dbpickle.py">
+      <file leaf-file-name="db_pickle.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db_pickle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_json.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db_json.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_yaml.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db_yaml.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
-              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbjson.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbjson.py">
+      <file leaf-file-name="test_module.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_module.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbyaml.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbyaml.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="102">
+              <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,10 +90,16 @@
       <list>
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/booksupfunc.py" />
-        <option value="$PROJECT_DIR$/dbpickle.py" />
+        <option value="$PROJECT_DIR$/dbtest.py" />
         <option value="$PROJECT_DIR$/dbjson.py" />
+        <option value="$PROJECT_DIR$/dbpickle.py" />
         <option value="$PROJECT_DIR$/dbyaml.py" />
+        <option value="$PROJECT_DIR$/db_pickle.py" />
+        <option value="$PROJECT_DIR$/db_json.py" />
+        <option value="$PROJECT_DIR$/db_yaml.py" />
+        <option value="$PROJECT_DIR$/test_db.py" />
         <option value="$PROJECT_DIR$/books.py" />
+        <option value="$PROJECT_DIR$/test_module.py" />
       </list>
     </option>
   </component>
@@ -146,7 +135,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -167,6 +155,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,23 +179,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="menu" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Library" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/menu.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="dbpickle" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -224,7 +196,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="dbjson" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="db_json" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -236,12 +208,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Library" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dbjson.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_json.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="dbyaml" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="db_yaml" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -253,7 +225,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Library" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dbyaml.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_yaml.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="db_pickle" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Library" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_pickle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -394,18 +383,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.books" />
-      <item index="1" class="java.lang.String" itemvalue="Python.menu" />
-      <item index="2" class="java.lang.String" itemvalue="Python.dbpickle" />
-      <item index="3" class="java.lang.String" itemvalue="Python.dbjson" />
-      <item index="4" class="java.lang.String" itemvalue="Python.dbyaml" />
+      <item index="1" class="java.lang.String" itemvalue="Python.dbpickle" />
+      <item index="2" class="java.lang.String" itemvalue="Python.db_json" />
+      <item index="3" class="java.lang.String" itemvalue="Python.db_yaml" />
+      <item index="4" class="java.lang.String" itemvalue="Python.db_pickle" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.books" />
-        <item index="1" class="java.lang.String" itemvalue="Python.dbyaml" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dbjson" />
-        <item index="3" class="java.lang.String" itemvalue="Python.dbpickle" />
-        <item index="4" class="java.lang.String" itemvalue="Python.menu" />
+        <item index="1" class="java.lang.String" itemvalue="Python.db_pickle" />
+        <item index="2" class="java.lang.String" itemvalue="Python.db_yaml" />
+        <item index="3" class="java.lang.String" itemvalue="Python.db_json" />
+        <item index="4" class="java.lang.String" itemvalue="Python.dbpickle" />
       </list>
     </recent_temporary>
   </component>
@@ -430,8 +419,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32861635" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32861635" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -468,37 +457,56 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/booksupfunc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/books.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3961">
-          <caret line="233" column="14" selection-start-line="233" selection-start-column="14" selection-end-line="233" selection-end-column="14" />
-          <folding>
-            <marker date="1494424573934" expanded="true" signature="372:488" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1193" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1197" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2122:2240" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2257:2373" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="3181:3297" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6418:6536" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6555:6673" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6692:6810" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="10976:11095" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11114:11233" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11252:11371" ph="..." />
-          </folding>
+        <state relative-caret-position="5780">
+          <caret line="340" column="4" selection-start-line="340" selection-start-column="4" selection-end-line="340" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbpickle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="31" selection-start-line="34" selection-start-column="16" selection-end-line="36" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbjson.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbyaml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -507,7 +515,65 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booksupfunc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5780">
+          <caret line="340" column="4" selection-start-line="340" selection-start-column="4" selection-end-line="340" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbpickle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="31" selection-start-line="34" selection-start-column="16" selection-end-line="36" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbjson.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbyaml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#12#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -524,20 +590,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3961">
           <caret line="233" column="14" selection-start-line="233" selection-start-column="14" selection-end-line="233" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1494424573934" expanded="true" signature="372:488" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1193" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1197" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2122:2240" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2257:2373" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="3181:3297" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6418:6536" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6555:6673" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6692:6810" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="10976:11095" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11114:11233" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11252:11371" ph="..." />
+            <element signature="e#0#12#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booksupfunc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3961">
+          <caret line="233" column="14" selection-start-line="233" selection-start-column="14" selection-end-line="233" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -545,20 +624,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1494424573934" expanded="true" signature="372:488" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1193" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1197" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2122:2240" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2257:2373" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="3181:3297" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6418:6536" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6555:6673" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6692:6810" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="10976:11095" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11114:11233" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11252:11371" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -566,20 +632,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1494424573934" expanded="true" signature="372:488" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1193" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1197" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2122:2240" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2257:2373" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="3181:3297" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6418:6536" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6555:6673" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6692:6810" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="10976:11095" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11114:11233" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11252:11371" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -587,20 +640,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1494424573934" expanded="true" signature="372:488" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1193" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1197" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2122:2240" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2257:2373" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="3181:3297" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6418:6536" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6555:6673" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6692:6810" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="10976:11095" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11114:11233" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11252:11371" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -610,7 +650,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -619,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="675" column="8" selection-start-line="675" selection-start-column="8" selection-end-line="675" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -627,60 +666,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5407">
           <caret line="1137" column="35" selection-start-line="1137" selection-start-column="35" selection-end-line="1137" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/booksupfunc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1889">
+        <state relative-caret-position="85">
           <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbjson.py">
+    <entry file="file://$PROJECT_DIR$/dbtest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dbyaml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+        <state relative-caret-position="493">
+          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbjson.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbpickle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_yaml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_pickle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_json.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/books.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="340" column="4" selection-start-line="340" selection-start-column="4" selection-end-line="340" selection-end-column="4" />
-          <folding>
-            <marker date="1494424573934" expanded="true" signature="372:488" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1193" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="1081:1197" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2122:2240" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="2257:2373" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="3181:3297" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6418:6536" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6555:6673" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="6692:6810" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="10976:11095" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11114:11233" ph="..." />
-            <marker date="1494424573934" expanded="true" signature="11252:11371" ph="..." />
-          </folding>
+        <state relative-caret-position="4114">
+          <caret line="242" column="43" selection-start-line="242" selection-start-column="43" selection-end-line="242" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbpickle.py">
+    <entry file="file://$PROJECT_DIR$/test_module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="102">
+          <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
