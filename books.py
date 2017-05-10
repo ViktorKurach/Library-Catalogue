@@ -277,6 +277,66 @@ def get_authors(catalogue, genre=None):
     return authors
 
 
+def parse_config(file, section, option):
+    """
+    Parses .cfg file and gets some value from it.
+    :param file: a string - file name
+    :param section: a string - name of section
+    :param option: a string - name of property
+    :returns a string - value of property in section in case of success,
+    or None otherwise.
+
+    In next versions function will be private: usage outside this module is
+    not recommended.
+    """
+    import configparser
+    config = configparser.RawConfigParser()
+    try:
+        config.read(file)
+        return config.get(section, option)
+    except configparser.NoSectionError:
+        return
+    except configparser.MissingSectionHeaderError:
+        return
+
+
+def load_library(file):
+    """
+    Loads a book list from a file.
+    :param file: a string - .pkl, .json or .yaml file name.
+    :returns loaded list of books in case of success, or None otherwise.
+    """
+    file_type = parse_config("config.cfg", "storage", "db_file_type")
+    if file_type == "pkl":
+        import dbpickle as db
+    elif file_type == "json":
+        import dbjson as db
+    elif file_type == "yaml":
+        import dbyaml as db
+    else:
+        return
+    return db.load_library(file)
+
+
+def save_library(file, catalogue):
+    """
+    Dumps list of books into the file.
+    :param file: a string - .pkl, .json or .yaml file name.
+    :param catalogue: a list of books.
+    :returns catalogue in case of success, or None otherwise.
+    """
+    file_type = parse_config("config.cfg", "storage", "db_file_type")
+    if file_type == "pkl" and file[-4:] == ".pkl":
+        import dbpickle as db
+    elif file_type == "json" and file[-5:] == ".json":
+        import dbjson as db
+    elif file_type == "yaml" and file[-5:] == ".yaml":
+        import dbyaml as db
+    else:
+        return
+    return db.save_library(file, catalogue)
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
