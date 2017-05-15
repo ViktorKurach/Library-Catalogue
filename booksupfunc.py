@@ -1,10 +1,10 @@
 import books
-book_catalogue = []
+book_catalogue=[]
 
 
 def get_book():
     """Create new dictionary element by using get_xxx functions;
-     return dictionary"""
+       :return dictionary element that contains book info"""
     buf = {}
     print("\nEnter new book\n")
     buf['path'] = get_path()
@@ -18,44 +18,44 @@ def get_book():
 
 
 def get_book_name():
-    """Using to get book name value;
-        returns standard python function input"""
+    """Get book name value;
+        :returns standard python function input"""
     print("Title: ")
     return input()
 
 
 def get_description():
-    """Using to get book description value;
-        returns standard python function input"""
+    """Get book description value;
+        :returns standard python function input"""
     print("Description:")
     return input()
 
 
 def get_path():
-    """Using to get book path value;
-        returns standard python function input"""
+    """Get book path value;
+        :returns standard python function input"""
     print("Path: ")
     return input()
 
 
 def get_publication():
-    """Using to get book publication value;
-        returns standard python function input"""
+    """Get book publication value;
+        :returns standard python function input"""
     print("Publication: ")
     return input()
 
 
 def get_author_name():
-    """Using to get book author name value;
-        returns standard python function input"""
+    """Get book author name value;
+        :returns standard python function input"""
     print("Author: ")
     return input()
 
 
 def get_year():
-    """Using to get book year value;
-        if year value cannot be converted returns None
-        else return integer value of year"""
+    """Get book year value;
+        :returns: None: if year value cannot be converted
+                    OR integer value of year"""
     print("Year: ")
     year = input()
     try:
@@ -66,25 +66,25 @@ def get_year():
 
 
 def get_key():
-    """Using to get key name for filtering function;\
-        return standard python function input"""
+    """Get key name for filtering function;\
+        :returns standard python function input"""
     print("Filter key(author,genre or year): ")
     return input()
 
 
 def get_key_value():
-    """Using to get filter key value value;
-        returns standard python function input"""
+    """Get filter key value value;
+        :returns standard python function input"""
     print("Enter key value: ")
     return input()
 
 
 def get_optional_values():
-    """Using to get optional values for filtering function;
-        uses get_year function to get years;
-        if input value of sort order cannot be converted to int returns 0
+    """Get optional values for filtering function;
+        if input value of sort order cannot be converted to int turns desc to 0
         else sort order is converted value
-        return integer values of years and sort order"""
+        :returns: year_f,year_t: integer values of years
+                  desc: sort order"""
     print("From(optional) ")
     year_f = get_year()
     print("To(optional) ")
@@ -98,8 +98,11 @@ def get_optional_values():
 
 
 def get_genre():
-    """Using to get genre value; if genre is not containing
-    any symbol or containing only whitespaces return None"""
+    """Get genre name
+
+    :returns: None: if genre is not containing
+                any symbol or containing only whitespaces
+              OR genre name if genre was inputted """
     print("Genre: ")
     _genre = input()
     if _genre == '' or _genre.isspace():
@@ -107,19 +110,55 @@ def get_genre():
     return _genre
 
 
+def mod_chosen():
+    """
+    Choose format of library file
+    :returns: 'w' if chosen formats are json or yaml
+                or 'wb' if chosen format is pickle
+    """
+    print('\n Choose format of library(pickle, json, yaml):')
+    ch=input()
+    if ch == 'json' or ch == 'yaml':
+        return 'w'
+    elif ch == 'pickle':
+        return 'wb'
+
+
+def load_library():
+    """Load books from inputted library file
+    :return: function load_library from  books module
+    """
+    print('\n Enter name of library file:')
+    file_name = input()
+    file=open(file_name, 'rb')
+    return books.load_library(file)
+
+
+def dump_into_library():
+    """Dump current book catalogue into inputted library file"""
+    print('\n Enter name of library file:')
+    file_name = input()
+    file = open(file_name, mod_chosen())
+    books.dump_library(file,book_catalogue)
+
+
 def print_menu():
-    """Using to print menu"""
+    """Print simple console menu"""
     print("\nMenu:\n")
     print("1. Add book to the catalogue\n")
     print("2. Edit book in the catalogue\n")
     print("3. Delete book from the catalogue\n")
     print("4. Filter books\n")
     print("5. Get authors\n")
+    print("6. Load catalogue from library\n")
+    print("7. Dump catalogue into library\n")
     print("0. Finish work")
 
 
 def pprint(catalogue):
-    """Using to print values of all elements in book catalogue that came"""
+    """Prints values of all elements in book catalogue
+    :param catalogue: a list of books.
+    """
     for i in catalogue:
         print("\nPath: {}, Title: {}".format(i['path'], i['title']))
         print("Author: {}".format(i['author']))
@@ -128,34 +167,9 @@ def pprint(catalogue):
 
 
 def print_authors(authors):
-    """Using to print all elements of list of authors"""
+    """Prints names of all authors
+    :param: authors: a list of authors"""
     for i in authors:
         print("Author: {}".format(i))
 
 
-def get_some_tests():
-    """Using to put some sample books into database;
-    adds dictionaries that contain books info database using add_book function
-    """
-    book1 = {"path": "C:\\Books", "title": "Перехресні стежки",
-             "author": "Іван Франко", "publication": "Фоліо",
-             "genre": "Пригодницький роман",
-             "description": "Мясо, матюки, убийства", "year": 1686}
-    book2 = {"path": "C:\\Books", "title": "Ворошиловград",
-             "author": "Сергій Жадан",
-             "publication": "Клуб сімейного дозвілля",
-             "genre": "Роман",
-             "description": "Мясо, матюки, убийства", "year": 2010}
-    book3 = {"path": "C:\\Books", "title": "Месопотамія",
-             "author": "Сергій Жадан",
-             "publication": "Клуб сімейного дозвілля", "genre": "Поезія",
-             "description": "Урбаністична збірка про Харків",
-             "year": 2014}
-    book4 = {"path": "C:\\Books", "title": "Колекціонер",
-             "author": "Джон Фаулз",
-             "publication": "Клуб сімейного дозвілля", "genre": "Роман",
-             "description": "Книга про поїхавшого", "year": 2016}
-    books.add_book(book_catalogue, book4)
-    books.add_book(book_catalogue, book3)
-    books.add_book(book_catalogue, book2)
-    books.add_book(book_catalogue, book1)

@@ -2,8 +2,7 @@ import books
 from booksupfunc import book_catalogue
 import booksupfunc as bsf
 
-bsf.get_some_tests()
-print("Welcome to the Home Library Catalogue(HLC v0.02-alpha)")
+print("Welcome to the Home Library Catalogue(HLC v0.03.1-alpha)")
 
 while True:
     bsf.print_menu()
@@ -23,5 +22,9 @@ while True:
                                       desc))
     elif ch == '5':
         bsf.print_authors(books.get_authors(book_catalogue, bsf.get_genre()))
+    elif ch == '6':
+        book_catalogue=bsf.load_library()
+    elif ch == '7':
+        bsf.dump_into_library()
     elif ch == '0':
         break
