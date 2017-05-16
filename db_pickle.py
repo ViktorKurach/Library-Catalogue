@@ -8,7 +8,8 @@ def load_library(file):
     :returns a list of books in case of success, or empty list otherwise.
     """
     with file:
-        return pickle.loads(file.read())
+        res = pickle.loads(file.read())
+    return res
 
 
 def dump_library(file, catalogue):
@@ -20,4 +21,4 @@ def dump_library(file, catalogue):
     """
     with file:
         file.write(pickle.dumps(catalogue))
-        return catalogue
+    return catalogue

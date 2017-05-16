@@ -23,7 +23,7 @@ while True:
     elif ch == '5':
         bsf.print_authors(books.get_authors(book_catalogue, bsf.get_genre()))
     elif ch == '6':
-        book_catalogue=bsf.load_library()
+        book_catalogue = bsf.load_library()
     elif ch == '7':
         bsf.dump_into_library()
     elif ch == '0':

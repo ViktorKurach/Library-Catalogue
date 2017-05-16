@@ -1,5 +1,5 @@
 import books
-book_catalogue=[]
+book_catalogue = []
 
 
 def get_book():
@@ -117,7 +117,7 @@ def mod_chosen():
                 or 'wb' if chosen format is pickle
     """
     print('\n Choose format of library(pickle, json, yaml):')
-    ch=input()
+    ch = input()
     if ch == 'json' or ch == 'yaml':
         return 'w'
     elif ch == 'pickle':
@@ -130,7 +130,7 @@ def load_library():
     """
     print('\n Enter name of library file:')
     file_name = input()
-    file=open(file_name, 'rb')
+    file = open(file_name, 'rb')
     return books.load_library(file)
 
 
@@ -139,7 +139,7 @@ def dump_into_library():
     print('\n Enter name of library file:')
     file_name = input()
     file = open(file_name, mod_chosen())
-    books.dump_library(file,book_catalogue)
+    books.dump_library(file, book_catalogue)
 
 
 def print_menu():
@@ -171,5 +171,3 @@ def print_authors(authors):
     :param: authors: a list of authors"""
     for i in authors:
         print("Author: {}".format(i))
-
-

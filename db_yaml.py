@@ -8,7 +8,8 @@ def load_library(file):
     :returns a list of books in case of success, or empty list otherwise.
     """
     with file:
-        return yaml.load(file.read())
+        res = yaml.load(file.read())
+    return res
 
 
 def dump_library(file, catalogue):
@@ -20,4 +21,4 @@ def dump_library(file, catalogue):
     """
     with file:
         yaml.dump(catalogue, file)
-        return catalogue
+    return catalogue
