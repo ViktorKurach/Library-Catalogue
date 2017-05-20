@@ -1,24 +1,27 @@
 import books
-book_catalogue=[]
 
 
 class Support:
     """
     A class working with library directly.
-    Contents methods:
+    Contains methods:
     1. __init__(self)
-    2. add_book(self, new)
-    3. search_book(self, title, author)
-    4. edit_book(self, old_title, old_author, new)
-    5. delete_book(self, title, author)
-    6. filter_books(self, key, value, year_from=None, year_to=None, desc=0)
-    7. get_authors(self, genre=None)
-    8. get_config(filename, section, option)
-    9. set_config(filename, section, option, new_value)
-    10. load_library(self, file, test_mode=False)
-    11. dump_library(self, file)
+    2. get_book(self)
+    3. get_year(self)
+    4. get_optional_values(self)
+    5. get_genre(self)
+    6. load_library(self)
+    7. dump_into_library(self)
+    8. print_menu(self)
+    9. pprint(self, catalogue)
+    10. print_authors(self, authors)
+    11. menu(self)
+
+    Contains fields:
+    1. catalogue - object of Library class
     """
     catalogue = books.Library()
+
     def __init__(self):
         """"""
         #catalogue = books.Library()
@@ -42,27 +45,12 @@ class Support:
         """Get book year value;
         :returns: None: if year value cannot be converted
                     OR integer value of year"""
-        print("Year: ")
-        year = input()
+        year = input("Year: ")
         try:
             year = int(year)
         except ValueError:
             return None
         return year
-
-    @staticmethod
-    def get_key(self):
-        """Get key name for filtering function;\
-        :returns standard python function input"""
-        print("Filter key(author,genre or year): ")
-        return input()
-
-    @staticmethod
-    def get_key_value(self):
-        """Get filter key value value;
-        :returns standard python function input"""
-        print("Enter key value: ")
-        return input()
 
     @staticmethod
     def get_optional_values(self):
@@ -72,12 +60,11 @@ class Support:
         :returns: year_f,year_t: integer values of years
                   desc: sort order"""
         print("From(optional) ")
-        year_f = self.get_year()
+        year_f = self.get_year(self)
         print("To(optional) ")
-        year_t = self.get_year()
-        print("Sort(optional) : 1 - ascending, -1 - descending")
+        year_t = self.get_year(self)
         try:
-            desc = int(input())
+            desc = int(input("Sort(optional) : 1 - ascending, -1 - descending"))
         except ValueError:
             desc = 0
         return year_f, year_t, desc
@@ -89,8 +76,7 @@ class Support:
         :returns: None: if genre is not containing
                 any symbol or containing only whitespaces
               OR genre name if genre was inputted """
-        print("Genre: ")
-        _genre = input()
+        _genre = input("Genre: ")
         if _genre == '' or _genre.isspace():
             _genre = None
         return _genre
@@ -114,19 +100,17 @@ class Support:
         """Load books from inputted library file
         :return: function load_library from  books module
         """
-        print('\n Enter name of library file:')
-        file_name = input()
+        file_name = input('\n Enter name of library file:')
         file=open(file_name, 'rb')
         return self.catalogue.load_library(file)
 
     @staticmethod
     def dump_into_library(self):
         """Dump current book catalogue into inputted library file"""
-        print('\n Enter name of library file:')
-        file_name = input()
+        file_name = input('\n Enter name of library file:')
         try:
             file = open(file_name, self.mod_chosen())
-            self.catalogue.dump_library(file,book_catalogue)
+            self.catalogue.dump_library(file)
         except:
             print("Can`t open file: {:}".format(file_name))
 
@@ -162,7 +146,8 @@ class Support:
             print("Author: {}".format(i))
 
     def menu(self):
-        """d"""
+        """Menu realization
+            """
         while True:
             self.print_menu(self)
             ch = input()
@@ -176,8 +161,8 @@ class Support:
                                            input("Author: "))
             elif ch == '4':
                 year_f, year_t, desc = self.get_optional_values(self)
-                self.pprint(self,self.catalogue.filter_books(self.get_key(self),
-                                               self.get_key_value(self), year_f, year_t,
+                self.pprint(self,self.catalogue.filter_books(input("Filter key(author,genre or year): "),
+                                               input("Enter key value: "), year_f, year_t,
                                               desc))
             elif ch == '5':
                 self.print_authors(self, self.catalogue.get_authors(self.get_genre(self)))
