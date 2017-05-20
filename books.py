@@ -12,6 +12,7 @@ class Library:
     8. get_config(filename, section, option)
     9. set_config(filename, section, option, new_value)
     10. load_library(self, file, test_mode=False)
+    11. dump_library(self, file)
     """
 
     def __init__(self):
