@@ -24,7 +24,7 @@ class Support:
 
     def __init__(self):
         """"""
-        #catalogue = books.Library()
+        # catalogue = books.Library()
 
     def get_book(self):
         """Create new dictionary element by using get_xxx functions;
@@ -64,7 +64,8 @@ class Support:
         print("To(optional) ")
         year_t = self.get_year(self)
         try:
-            desc = int(input("Sort(optional) : 1 - ascending, -1 - descending"))
+            desc = int(input("Sort(optional) : 1 - ascending, \
+-1 - descending"))
         except ValueError:
             desc = 0
         return year_f, year_t, desc
@@ -89,7 +90,7 @@ class Support:
                 or 'wb' if chosen format is pickle
         """
         print('\n Choose format of library(pickle, json, yaml):')
-        ch=input()
+        ch = input()
         if ch == 'json' or ch == 'yaml':
             return 'w'
         elif ch == 'pickle':
@@ -101,7 +102,7 @@ class Support:
         :return: function load_library from  books module
         """
         file_name = input('\n Enter name of library file:')
-        file=open(file_name, 'rb')
+        file = open(file_name, 'rb')
         return self.catalogue.load_library(file)
 
     @staticmethod
@@ -161,11 +162,15 @@ class Support:
                                            input("Author: "))
             elif ch == '4':
                 year_f, year_t, desc = self.get_optional_values(self)
-                self.pprint(self,self.catalogue.filter_books(input("Filter key(author,genre or year): "),
-                                               input("Enter key value: "), year_f, year_t,
-                                              desc))
+                self.pprint(self, self.catalogue.filter_books(input("Filter \
+key(author,genre or year): "),
+                                                              input("Enter \
+key value: "),
+                                                              year_f, year_t,
+                                                              desc))
             elif ch == '5':
-                self.print_authors(self, self.catalogue.get_authors(self.get_genre(self)))
+                self.print_authors(self, self.catalogue.get_authors(
+                    self.get_genre(self)))
             elif ch == '6':
                 self.load_library(self)
             elif ch == '7':

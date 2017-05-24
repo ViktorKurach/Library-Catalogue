@@ -1,6 +1,7 @@
 class Library:
     """
     A class working with library directly.
+
     Contents methods:
     1. __init__(self)
     2. add_book(self, new)
@@ -13,6 +14,9 @@ class Library:
     9. set_config(filename, section, option, new_value)
     10. load_library(self, file, test_mode=False)
     11. dump_library(self, file)
+
+    Contents list:
+    1. library
     """
 
     def __init__(self):
@@ -119,7 +123,8 @@ class Library:
         if key not in ["author", "genre", "year"]:
             return
         if key == "year":
-            return self.__filter_by_year(self.library, year_from, year_to, desc)
+            return self.__filter_by_year(self.library, year_from,
+                                         year_to, desc)
         res = []
         for x in self.library:
             if (x[key] == value) and (x not in res):
